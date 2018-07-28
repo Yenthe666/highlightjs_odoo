@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Adds all assets in Odoo -->
+        <template id="assets_frontend" name="highlightjs assets" inherit_id="web.assets_frontend">
+            <xpath expr="." position="inside">
+                <!-- To use another style for the code blocks you can either paste the code from one of the CSS
+                     styles into default.css or comment this line out and uncomment the theme you'd like.
+                     You can see and test all theme's at https://highlightjs.org/static/demo/ by switching
+                     the "Styles" selection in the left menu bar.
+                -->
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/default.css"/>
+                <!--<link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/agate.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/androidstudio.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/arduino-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/arta.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/ascetic.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-cave-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-cave-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-dune-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-dune-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-estuary-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-estuary-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-forest-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-forest-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-heath-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-heath-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-lakeside-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-lakeside-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-plateau-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-plateau-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-savanna-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-savanna-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-seaside-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-seaside-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-sulphurpool-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atelier-sulphurpool-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atom-one-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/atom-one-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/brown-paper.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/codepen-embed.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/color-brewer.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/darcula.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/darkula.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/docco.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/dracula.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/far.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/foundation.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/github.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/github-gist.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/googlecode.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/grayscale.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/gruvbox-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/gruvbox-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/hopscotch.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/hybrid.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/idea.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/ir-black.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/kimbie.dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/kimbie.light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/magula.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/mono-blue.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/monokai.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/monokai-sublime.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/obsidian.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/ocean.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/paraiso-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/paraiso-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/pojoaque.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/purebasic.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/qtcreator_dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/qtcreator_light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/railscasts.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/rainbow.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/routeros.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/school-book.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/solarized-dark.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/solarized-light.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/sunburst.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/tomorrow.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/tomorrow-night.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/tomorrow-night-blue.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/tomorrow-night-bright.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/tomorrow-night-eighties.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/vs.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/vs2015.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/xcode.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/xt256.css"/>
+                <link rel="stylesheet" href="/code_building_block/static/src/highlightjs/styles/zenburn.css"/>-->
+                <script type="text/javascript"
+                        src="/code_building_block/static/src/highlightjs/highlight.pack.js"></script>
+                <script type="text/javascript" src="/code_building_block/static/src/highlightjs/initialise.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
